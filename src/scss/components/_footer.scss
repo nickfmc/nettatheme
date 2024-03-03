@@ -3,9 +3,77 @@
    ========================================================================== */
 
 .c-page-footer {
-  background-color: $color-gray-light;
+  background-color: $color-offwhite;
+  color: $color-redoxide;
+  border-top: 1px solid rgba(74, 31, 40,0.2);
+  position: relative;
+a {
+    color: $color-redoxide;
+    transition: $transition-ease;
+   
+  }
+  
+  &::before {
+   
+@media(width >= 1048px) {
+  background-image: url('/wp-content/uploads/2024/02/statue.png');
+  background-repeat: no-repeat;
+  background-position: 50px 37px;
+  background-size: 200px;
+  content: '';
+  position: absolute;
+  height: 100%;
+  margin: 0 auto;
+  bottom: 0;
+  width: 100%;
+opacity: 0.6;
+} 
+  }
+
+
+}
+
+.c-footer-upper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 10;
+}
+
+.c-footer-socials {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  a {
+    background-color: $color-redoxide;
+    border-radius: 50%;
+    color: $color-offwhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    margin: 0 4px;
+    width: 40px;
+    transition: $transition-ease;
+    &:hover {
+      background-color: $color-red;
+    }
+  }
+}
+
+.c-lower-footer {
+  background-color: rgba(74, 31, 40,0.2);
+  padding: 10px 25px;
   padding-left: 25px;
   padding-right: 25px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  z-index: 10;
+  position: relative;
+  color: $color-redoxide;
+}
+
+.c-footer-slogan {
+  text-align: center;
+  h3 {
+    font-size: 80px;
+  }
 }

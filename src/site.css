@@ -3624,7 +3624,9 @@ html {
 
 body {
   color: #000;
-  font-family: "Arial", sans-serif;
+  position: relative;
+  background-color: #EFE4E2;
+  font-family: "Lato", sans-serif;
   line-height: 1.5;
   -webkit-overflow-scrolling: touch;
 }
@@ -3672,8 +3674,8 @@ blockquote::before {
    HEADINGS
    ========================================================================== */
 h1, .h1-style, h2, .h2-style, h3, .h3-style, h4, .h4-style, h5, .h5-style, h6, .h6-style {
-  color: #ACACAC;
-  font-family: "Times New Roman", serif;
+  color: #4A1F28;
+  font-family: "Rozha One", serif;
   font-weight: 400;
   line-height: 1.1;
   margin: 0 0 1rem 0;
@@ -3684,7 +3686,10 @@ h1 a, .h1-style a, h2 a, .h2-style a, h3 a, .h3-style a, h4 a, .h4-style a, h5 a
 }
 
 h1, .h1-style {
-  font-size: clamp(2.81rem, 1.5vw + 2.44rem, 3.75rem);
+  font-size: clamp(5rem, 3.2vw + 4.2rem, 7rem);
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: 20px;
 }
 
 h2, .h2-style {
@@ -3775,6 +3780,7 @@ p {
   line-height: 1.5;
   margin: 0 0 1rem 0;
   padding: 0;
+  font-size: 18px;
 }
 
 /* ==========================================================================
@@ -3915,7 +3921,7 @@ p {
 }
 
 .is-style-secondaryfont {
-  font-family: "Times New Roman", serif;
+  font-family: "Rozha One", serif;
 }
 
 .wp-block-table {
@@ -4087,6 +4093,52 @@ p {
   color: #000;
 }
 
+.c-glitch-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all 2550ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 2550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.c-glitch-button span {
+  z-index: 20;
+}
+.c-glitch-button:after {
+  background: #fff;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: 0.2;
+  position: absolute;
+  top: -50px;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+  -webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10;
+}
+
+.gb-button:hover {
+  background-color: #EFE4E2;
+}
+.gb-button:hover:after {
+  left: 120%;
+  -webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
 /* ==========================================================================
    FOOTER WIDGETS
    ========================================================================== */
@@ -4134,23 +4186,135 @@ p {
    FOOTER
    ========================================================================== */
 .c-page-footer {
-  background-color: #EAEAEA;
+  background-color: #EFE4E2;
+  color: #4A1F28;
+  border-top: 1px solid rgba(74, 31, 40, 0.2);
+  position: relative;
+}
+.c-page-footer a {
+  color: #4A1F28;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+@media (width >= 1048px) {
+  .c-page-footer::before {
+    background-image: url("/wp-content/uploads/2024/02/statue.png");
+    background-repeat: no-repeat;
+    background-position: 50px 37px;
+    background-size: 200px;
+    content: "";
+    position: absolute;
+    height: 100%;
+    margin: 0 auto;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.6;
+  }
+}
+
+.c-footer-upper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 10;
+}
+
+.c-footer-socials {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.c-footer-socials a {
+  background-color: #4A1F28;
+  border-radius: 50%;
+  color: #EFE4E2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+  margin: 0 4px;
+  width: 40px;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.c-footer-socials a:hover {
+  background-color: #A82313;
+}
+
+.c-lower-footer {
+  background-color: rgba(74, 31, 40, 0.2);
+  padding: 10px 25px;
   padding-left: 25px;
   padding-right: 25px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  z-index: 10;
+  position: relative;
+  color: #4A1F28;
+}
+
+.c-footer-slogan {
+  text-align: center;
+}
+.c-footer-slogan h3 {
+  font-size: 80px;
 }
 
 /* ==========================================================================
    HEADER
    ========================================================================== */
 .c-page-header {
-  background: #fff;
+  background: #EFE4E2;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   height: 100px;
   padding-left: 25px;
   padding-right: 25px;
+  border-bottom: 1px solid #cebdbd;
+  -webkit-box-shadow: 2 0 10px rgb(0, 0, 0);
+          box-shadow: 2 0 10px rgb(0, 0, 0);
+}
+
+.c-loader {
+  background-color: #EFE4E2;
+  width: 100vw;
+  height: 100%;
+  z-index: 3001;
+  position: absolute;
+  top: 0;
+}
+
+.c-loader-inner {
+  background-color: #EFE4E2;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3001;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.c-loader-inner svg {
+  width: 400px;
+  height: 250px;
+}
+.c-loader-inner svg path {
+  fill: #4A1F28;
 }
 
 /* ==========================================================================
@@ -4158,7 +4322,7 @@ p {
    ========================================================================== */
 .c-logo-main {
   position: absolute;
-  top: 18px;
+  top: 10px;
   z-index: 1;
 }
 .c-logo-main a {
@@ -4175,6 +4339,12 @@ p {
     width: 250px;
   }
 }
+.c-logo-main svg {
+  width: 130px;
+}
+.c-logo-main svg path {
+  fill: #4A1F28;
+}
 
 /* ==========================================================================
    MAIN NAVIGATION AND MENU STYLES
@@ -4187,7 +4357,8 @@ p {
   .c-main-navigation {
     /* DISPLAY FULL SIZE MENU */
     display: block;
-    padding-left: calc(300px + 1rem);
+    width: 100%;
+    padding-left: calc(200px + 1rem);
     position: absolute;
     right: 0;
     top: 0;
@@ -4213,9 +4384,10 @@ p {
     white-space: nowrap;
   }
   .c-main-menu > li > a {
-    color: #555555;
+    color: #4A1F28;
+    font-family: "Rozha One", serif;
     display: block;
-    font-size: 1rem;
+    font-size: 20px;
     margin: 0;
     padding: 41px 1rem;
   }
@@ -4226,14 +4398,14 @@ p {
     padding-right: 0;
   }
   .c-main-menu > li > a:hover {
-    color: #222222;
+    color: #4A1F28;
   }
   .c-main-menu > .current-menu-item > a,
 .c-main-menu > .current-page-ancestor > a,
 .c-main-menu > .current_page_item > a,
 .c-main-menu > .current_page_parent > a,
 .c-main-menu > .current_page_ancestor > a {
-    color: #222222;
+    color: #4A1F28;
   }
 }
 @media (width >= 992px) {
@@ -4285,6 +4457,36 @@ p {
 .c-main-menu ul .current_page_ancestor > a {
     color: #000000;
   }
+}
+.mega-sub-menu {
+  -webkit-box-shadow: 3px 8px 14px rgba(0, 0, 0, 0.3) !important;
+          box-shadow: 3px 8px 14px rgba(0, 0, 0, 0.3) !important;
+}
+.mega-sub-menu img {
+  border: 2px solid #EFE4E2;
+  border-radius: 5px;
+  width: 150px;
+  margin-top: 20px;
+}
+.mega-sub-menu p {
+  color: #4A1F28;
+}
+.mega-sub-menu a:not(.stk-button) {
+  -webkit-transition: none;
+  transition: none;
+  color: #4A1F28;
+  text-decoration: underline;
+}
+.mega-sub-menu a.stk-button {
+  -webkit-transition: none;
+  transition: none;
+}
+.mega-sub-menu a.stk-button:hover {
+  background-color: #4A1F28 !important;
+  color: #EFE4E2 !important;
+}
+.mega-sub-menu a.stk-button:hover span.stk-button__inner-text {
+  color: #EFE4E2 !important;
 }
 /* ==========================================================================
    VARIABLES
@@ -5505,6 +5707,21 @@ body.hc-nav-open {
   text-align: center;
 }
 
+.u-eyebrow {
+  font-size: clamp(1.25rem, 0.5vw + 1.13rem, 1.56rem);
+  letter-spacing: 5.7px;
+}
+
+.u-eyebrow-interior {
+  font-size: clamp(1.13rem, 0.2vw + 1.08rem, 1.25rem);
+  letter-spacing: 3px;
+}
+
+.u-eyebrow-small {
+  font-size: clamp(1rem, 0.2vw + 0.95rem, 1.13rem);
+  letter-spacing: 4.2px;
+}
+
 .u-aspect-16x9 {
   padding-bottom: 56.25%; /* (9 / 16 = 0.5625) */
 }
@@ -5538,6 +5755,32 @@ body.hc-nav-open {
 /* ==========================================================================
    OVERRIDES - hacks and styles of last resort live here
    ========================================================================== */
+.c-image-overlap {
+  position: absolute;
+  width: 150px;
+  left: 0;
+  top: -20px;
+  border: 10px solid #EFE4E2;
+}
+@media (width >= 450px) {
+  .c-image-overlap {
+    width: 200px;
+  }
+}
+@media (width >= 768px) {
+  .c-image-overlap {
+    width: 200px;
+    left: 55px;
+    top: 100px;
+  }
+}
+@media (width >= 992px) {
+  .c-image-overlap {
+    width: 300px;
+    left: 0;
+  }
+}
+
 /* ==========================================================================
    PRINT STYLES
    ========================================================================== */

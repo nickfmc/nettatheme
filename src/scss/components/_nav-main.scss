@@ -12,6 +12,7 @@
   .c-main-navigation {
     /* DISPLAY FULL SIZE MENU */
     display: block;
+    width: 100%;
     padding-left: calc(#{$logo-size} + 1rem);
     position: absolute;
     right: 0;
@@ -38,9 +39,10 @@
     white-space: nowrap;
   }
   .c-main-menu > li > a {
-    color: #555555;
+    color: $color-redoxide;
+    font-family: $font-secondary;
     display: block;
-    font-size: 1rem;
+    font-size: 20px;
     margin: 0;
     padding: 41px 1rem;
     &:first-of-type > a {
@@ -51,14 +53,14 @@
     }
   }
   .c-main-menu > li > a:hover {
-    color: #222222;
+    color: $color-redoxide;
   }
   .c-main-menu > .current-menu-item > a,
   .c-main-menu > .current-page-ancestor > a,
   .c-main-menu > .current_page_item > a,
   .c-main-menu > .current_page_parent > a,
   .c-main-menu > .current_page_ancestor > a {
-    color: #222222
+    color: $color-redoxide;
   }
 }
 // END menu top level
@@ -114,3 +116,43 @@
   }
 }
 // END drop down styling
+
+.mega-sub-menu {
+  box-shadow: 3px 8px 14px rgba(0,0,0,0.3) !important;
+  img {
+    border: 2px solid $color-offwhite;
+    border-radius: 5px;
+    width: 150px;
+    margin-top: 20px;
+    
+  }
+  p {
+    color: $color-redoxide;
+    
+  }
+  a:not(.stk-button) {
+    transition: none;
+    color: $color-redoxide;
+    text-decoration: underline;
+  }
+  a.stk-button {
+    transition: none;
+
+    &:hover {
+      background-color: $color-redoxide !important;
+      color: $color-offwhite !important;
+      span.stk-button__inner-text {
+        color: $color-offwhite !important;
+      
+      }
+    
+    }
+  }
+  .mega-menu-item {
+    // a {
+    //   color: $color-offwhite !important;
+      
+    // }
+  }
+}
+

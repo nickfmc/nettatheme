@@ -3,11 +3,13 @@
    ========================================================================== */
 
 .c-page-header {
-  background: #fff;
+  background: $color-offwhite;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   height: 100px;  
   padding-left: 25px;
   padding-right: 25px;
+  border-bottom: 1px solid #cebdbd;
+  box-shadow: 2 0 10px rgba(0,0,0,1);
   // enable styles below for usage with headroom.js
   // position: fixed;
   // top: 0;

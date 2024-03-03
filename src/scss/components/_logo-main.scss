@@ -4,7 +4,7 @@
 
 .c-logo-main {
   position: absolute;
-  top: 18px;
+  top: 10px;
   z-index: z(default);
   & a {
     display: block;
@@ -17,5 +17,12 @@
     @media (width >= $bp-medium) {
       width: 250px;
      } 
+  }
+  svg  {
+    width: 130px;
+    path{
+      fill: $color-redoxide;
+    }
+
   }
 }

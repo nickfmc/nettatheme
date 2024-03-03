@@ -3,3 +3,27 @@
    ========================================================================== */
 
 // ideally this file is forever blank. likely it won't be. :(
+
+.c-image-overlap {
+position: absolute;
+width: 150px;
+left: 0;
+top: -20px;
+border: 10px solid $color-offwhite;
+@media(width >= 450px) {
+   width: 200px;
+
+} 
+
+@media(width >= 768px) {
+   width: 200px;
+   left: 55px;
+   top: 100px;
+} 
+
+@media(width >= $bp-large) {
+   width: 300px;
+   left: 0;
+
+} 
+} 

@@ -10,33 +10,38 @@
 			"palette": [
 				{
                     "name": "Black",
-					"slug": "black",
+					"slug": "maw-black",
 					"color": "#000000"
 				},
 				{
-					"slug": "white",
+					"slug": "maw-white",
 					"color": "#FFFFFF",
 					"name": "White"
 				},
                 {
-					"slug": "dark-grey",
-					"color": "#121212",
-					"name": "Dark grey"
+					"slug": "brown",
+					"color": "#ca987e",
+					"name": "Brown"
 				},
 				{
-					"slug": "medium-grey",
-					"color": "#383838",
-					"name": "Medium grey"
+					"slug": "pinkish",
+					"color": "#ffead6",
+					"name": "Kinda Pink"
 				},
 				{
-					"slug": "cyan",
-					"color": "#00838f",
-					"name": "Cyan"
+					"slug": "offwhite",
+					"color": "#EFE4E2",
+					"name": "Offwhite"
 				},
 				{
-					"slug": "light-cyan",
-					"color": "#4fb3bf",
-					"name": "Light cyan" 
+					"slug": "grey",
+					"color": "#514c4d",
+					"name": "grey"
+				},
+				{
+					"slug": "red-oxide",
+					"color": "#4A1F28",
+					"name": "Red Oxide" 
 				}
 			]
 		

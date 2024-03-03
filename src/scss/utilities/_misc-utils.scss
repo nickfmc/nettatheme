@@ -25,6 +25,22 @@
   text-align: center;
 }
 
+.u-eyebrow {
+  font-size: clamped(20px, 25px);
+  letter-spacing: 5.7px;
+}
+
+.u-eyebrow-interior {
+  font-size: clamped(18px, 20px);
+  letter-spacing: 3px;
+
+}
+
+.u-eyebrow-small {
+  font-size: clamped(16px, 18px);
+  letter-spacing: 4.2px;
+
+}
 
 // ++ media or embed aspect ratio +++++++++++++++++++++++++++++++++
 .u-aspect-16x9 {
