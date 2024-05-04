@@ -3166,7 +3166,7 @@ body {
   position: relative;
   background-color: #EFE4E2;
   font-family: "Lato", sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -3225,7 +3225,7 @@ h1 a, .h1-style a, h2 a, .h2-style a, h3 a, .h3-style a, h4 a, .h4-style a, h5 a
 }
 
 h1, .h1-style {
-  font-size: clamp(5rem, 3.2vw + 4.2rem, 7rem);
+  font-size: clamp(3.75rem, 3.5vw + 2.88rem, 5.94rem);
   font-weight: 900;
   line-height: 0.9;
   margin-bottom: 20px;
@@ -3316,9 +3316,10 @@ a[href^="mailto:"] {
    P TAGS
    ========================================================================== */
 p {
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0 0 1rem 0;
   padding: 0;
+  letter-spacing: 0.3px;
   font-size: 18px;
 }
 
@@ -6289,6 +6290,15 @@ p {
 .u-orphan-fix {
   overflow: hidden;
   width: auto;
+}
+
+@media (width >= 768px) {
+  .u-2col {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    gap: 50px;
+  }
 }
 
 .u-visually-hidden {

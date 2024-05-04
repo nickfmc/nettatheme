@@ -119,12 +119,10 @@ $paddingHorizontal: 25px;
 // ++ ul list block (with custom class added) +++++++++++++++++++++++++++++++++
 .editor-content ul {
   list-style-type: none;
-  margin: 1rem 0 1rem 20px;
+  margin: 1rem 0 1rem 5px;
   padding: 0;
   overflow: hidden;
-  @media(width >= $bp-large) {
-  margin-left: 30px;
-  } 
+  
 }
 .editor-content ul li {
   margin: 0;
@@ -142,6 +140,12 @@ $paddingHorizontal: 25px;
   border-radius: 50%;
   top: 0.58em;
   left: 0;
+}
+
+.editor-content  ul.has-offwhite-color {
+ li::before {
+background-color: $color-offwhite !important;
+  }
 }
 
 .editor-content  .stk-block-icon-list  ul {

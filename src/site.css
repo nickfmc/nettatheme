@@ -3627,7 +3627,7 @@ body {
   position: relative;
   background-color: #EFE4E2;
   font-family: "Lato", sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -3686,7 +3686,7 @@ h1 a, .h1-style a, h2 a, .h2-style a, h3 a, .h3-style a, h4 a, .h4-style a, h5 a
 }
 
 h1, .h1-style {
-  font-size: clamp(5rem, 3.2vw + 4.2rem, 7rem);
+  font-size: clamp(3.75rem, 3.5vw + 2.88rem, 5.94rem);
   font-weight: 900;
   line-height: 0.9;
   margin-bottom: 20px;
@@ -3777,9 +3777,10 @@ a[href^="mailto:"] {
    P TAGS
    ========================================================================== */
 p {
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0 0 1rem 0;
   padding: 0;
+  letter-spacing: 0.3px;
   font-size: 18px;
 }
 
@@ -3945,14 +3946,9 @@ p {
 
 .editor-content ul {
   list-style-type: none;
-  margin: 1rem 0 1rem 20px;
+  margin: 1rem 0 1rem 5px;
   padding: 0;
   overflow: hidden;
-}
-@media (width >= 992px) {
-  .editor-content ul {
-    margin-left: 30px;
-  }
 }
 
 .editor-content ul li {
@@ -3972,6 +3968,10 @@ p {
   border-radius: 50%;
   top: 0.58em;
   left: 0;
+}
+
+.editor-content ul.has-offwhite-color li::before {
+  background-color: #EFE4E2 !important;
 }
 
 .editor-content .stk-block-icon-list ul {
@@ -4215,6 +4215,8 @@ p {
 .c-footer-upper {
   padding-top: 50px;
   padding-bottom: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
   position: relative;
   z-index: 10;
 }
@@ -4488,6 +4490,78 @@ p {
 .mega-sub-menu a.stk-button:hover span.stk-button__inner-text {
   color: #EFE4E2 !important;
 }
+body #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link {
+  text-transform: none;
+  font-size: 18px;
+  font-family: "Rozha One", serif;
+}
+
+body #mega-menu-wrap-main-menu #mega-menu-main-menu p {
+  font-size: 15px;
+}
+
+body #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
+  font-size: 20px;
+  font-weight: 400 !important;
+}
+body #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link:hover {
+  font-weight: 400 !important;
+}
+
+body #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link {
+  font-weight: 400;
+}
+
+body #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
+  font-size: 20px;
+  font-weight: 400 !important;
+  position: relative;
+  -webkit-transition: color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+body #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link:hover {
+  font-weight: 400 !important;
+}
+body #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link:hover:before {
+  width: 100%;
+}
+body #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link:before {
+  content: "" !important;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #432818;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+body #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link, body #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-current-page-ancestor > a.mega-menu-link {
+  color: #432818 !important;
+  font-weight: 700;
+}
+body #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link:before, body #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-current-page-ancestor > a.mega-menu-link:before {
+  content: "" !important;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 3px;
+  background: #432818;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+body #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link:hover::before, body #mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-current-page-ancestor > a.mega-menu-link:hover::before {
+  width: 100%;
+}
+
 /* ==========================================================================
    VARIABLES
    ========================================================================== */
@@ -4497,13 +4571,21 @@ p {
   }
 }
 
+.nav-content svg {
+  width: 100px;
+  fill: #4A1F28;
+}
+.nav-content svg path {
+  fill: #4A1F28;
+}
+
 .c-modal-nav-button-wrap {
   z-index: 100;
   margin: 0;
   position: absolute;
   right: 0;
   font-size: 40px;
-  top: 10px;
+  top: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4512,13 +4594,13 @@ p {
   justify-content: flex-end;
 }
 .c-modal-nav-button-wrap a {
-  color: #529564;
+  color: #4A1F28;
 }
 
 @media (width >= 325px) {
   .c-modal-nav-button-wrap {
     font-size: 40px;
-    top: 10px;
+    top: 22px;
   }
 }
 @media (width >= 992px) {
@@ -4529,7 +4611,7 @@ p {
 .nav-title {
   height: 100px;
   margin-bottom: 0;
-  background-color: #fff;
+  background-color: #EFE4E2;
 }
 
 .c-mobile-menu-header a {
@@ -4857,7 +4939,7 @@ body.hc-nav-open {
 .hc-offcanvas-nav .nav-container,
 .hc-offcanvas-nav .nav-wrapper,
 .hc-offcanvas-nav ul {
-  background: #fff;
+  background: #4A1F28;
 }
 
 .hc-offcanvas-nav .nav-content > h2, .hc-offcanvas-nav .nav-content > h3, .hc-offcanvas-nav .nav-content > h4, .hc-offcanvas-nav .nav-content > h5, .hc-offcanvas-nav .nav-content > h6 {
@@ -4878,10 +4960,10 @@ body.hc-nav-open {
 .hc-offcanvas-nav .nav-back a {
   padding: 18px 17px;
   font-size: 18px;
-  color: #323232;
+  color: #EFE4E2;
   z-index: 1;
-  background: #fff;
-  border-bottom: 1px solid #efefef;
+  background: #4A1F28;
+  border-bottom: 1px solid rgba(239, 228, 226, 0.3);
   -webkit-transition: background 0.1s ease;
   transition: background 0.1s ease;
   text-align: left;
@@ -4906,7 +4988,8 @@ body.hc-nav-open {
 }
 
 .hc-offcanvas-nav:not(.touch-device) li:not(.nav-item-custom) a:not([disabled]):hover {
-  background: #fff;
+  background: #EFE4E2;
+  color: #4A1F28;
 }
 
 .hc-offcanvas-nav .nav-custom-content {
@@ -4981,7 +5064,7 @@ body.hc-nav-open {
   position: absolute;
   width: 2px;
   height: 30px;
-  background-color: #ddd;
+  background-color: #4A1F28;
   margin-top: -15px;
 }
 
@@ -5062,7 +5145,7 @@ body.hc-nav-open {
 .hc-offcanvas-nav .nav-back a {
   background: #f7f7f7;
   border-top: 1px solid #ededed;
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid rgba(239, 228, 226, 0.3);
 }
 
 .hc-offcanvas-nav .nav-content > .nav-close:first-child a:hover,
@@ -5078,8 +5161,8 @@ body.hc-nav-open {
 }
 
 .hc-offcanvas-nav a.nav-next {
-  border-left: 1px solid #efefef;
-  border-bottom: 1px solid #efefef;
+  border-left: 1px solid rgba(239, 228, 226, 0.3);
+  border-bottom: 1px solid rgba(239, 228, 226, 0.3);
 }
 
 .hc-offcanvas-nav .nav-next span::before,
@@ -5189,7 +5272,7 @@ body.hc-nav-open {
 }
 
 .hc-offcanvas-nav.nav-levels-expand li.level-open > .nav-item-wrapper > a, .hc-offcanvas-nav.nav-levels-none li.level-open > .nav-item-wrapper > a {
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid rgba(239, 228, 226, 0.3);
 }
 
 .hc-offcanvas-nav.nav-levels-expand li.level-open > .nav-item-wrapper > a:hover, .hc-offcanvas-nav.nav-levels-none li.level-open > .nav-item-wrapper > a:hover {
@@ -5290,7 +5373,7 @@ body.hc-nav-open {
 }
 
 .hc-offcanvas-nav .sub-menu {
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid rgba(239, 228, 226, 0.3);
   padding-top: 10px;
 }
 
@@ -5729,6 +5812,15 @@ body.hc-nav-open {
 .u-orphan-fix {
   overflow: hidden;
   width: auto;
+}
+
+@media (width >= 768px) {
+  .u-2col {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    gap: 50px;
+  }
 }
 
 .u-visually-hidden {

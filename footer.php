@@ -27,7 +27,7 @@
      <div class="c-lower-footer  ">
      <div class="o-wrapper-wide">
         <div class="u-text-center">
-          Capywrite &copy; <?php echo date('Y'); ?> Imla. <span class="mr-2 ml-2">|</span > A website by <a href="https://mountainairweb.com" target="_blank">Mountain Air Web Ltd.</a>
+          Copywrite &copy; <?php echo date('Y'); ?> Ima. <span class="mr-2 ml-2">|</span > A website by <a href="https://mountainairweb.com" target="_blank">Mountain Air Web Ltd.</a>
         </div>
         </div>
         

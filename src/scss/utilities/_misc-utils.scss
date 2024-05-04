@@ -54,6 +54,12 @@
   width: auto;
 }
 
+.u-2col {
+  @media(width >= $bp-medium) {
+    column-count: 2;
+    gap: 50px;
+  } 
+}
 
 // ++ visibility classes ++++++++++++++++++++++++++++++++++++
 .u-visually-hidden {

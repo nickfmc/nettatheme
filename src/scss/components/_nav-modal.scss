@@ -2,16 +2,17 @@
    VARIABLES
    ========================================================================== */
    
-   $color-close: #ddd;
-   $color-dividing-line: #efefef; 
-   $color-item-bg: #fff;
-   $color-open-btn: $color-secondary;
+   $color-close: $color-redoxide;
+   $color-dividing-line: rgba(239, 228, 226, 0.30);
+   $color-item-bg: $color-redoxide;
+   $color-open-btn: $color-redoxide;
    $color-close-btn: $color-secondary;
-   $color-item-bg-hover: #fff; 
-   $color-menu-bg: #fff;
+   $color-item-bg-hover: $color-offwhite;
+   $color-item-hover: $color-redoxide;
+   $color-menu-bg: $color-redoxide;
    $header-height: 100px;
-   $header-bg-color: #fff;
-   $color-menu-item:  $color-gray-dark;
+   $header-bg-color: $color-offwhite;
+   $color-menu-item:  $color-offwhite;
    $color-menu-sub-item:  $color-gray-dark;
    $nav-item-alignment: left;
 
@@ -22,6 +23,17 @@
      
      } 
    }
+
+   .nav-content {
+    svg {
+      width: 100px;
+      fill: $color-redoxide;
+      path {
+        fill: $color-redoxide;
+      
+      }
+    }
+   }
  
   .c-modal-nav-button-wrap {
    z-index: 100;
@@ -29,7 +41,7 @@
    position: absolute;
    right: 0;
    font-size: 40px;
-   top: 10px;
+   top: 22px;
    display: -webkit-box; 
    display: -ms-flexbox;
    display: flex;
@@ -44,7 +56,7 @@
  @media (width >= 325px) {
    .c-modal-nav-button-wrap {
      font-size: 40px;
-     top: 10px;
+     top: 22px;
    }
  }
  @media (width >= 992px) {
@@ -384,6 +396,7 @@ a {
  }
  .hc-offcanvas-nav:not(.touch-device) li:not(.nav-item-custom) a:not([disabled]):hover {
    background:  $color-item-bg-hover;
+   color: $color-item-hover;
  }
  .hc-offcanvas-nav .nav-custom-content {
    padding: 14px 17px;
